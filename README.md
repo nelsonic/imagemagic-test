@@ -33,6 +33,10 @@ If you download this repo and run `npm install` followed by:
 *However* when I try to wrap im.identify in a method (with a callback) it *fails*:
 
 ```javascript
+var IR = {}
+
+/* * Trying to Wrap the im.identify in a function with callback * */
+
 IR.getOriginalImageAttributes = function(filename, callback) {
   return im.identify(filename, function(err, ia) {
     console.log("Filename: " + filename);
@@ -40,6 +44,10 @@ IR.getOriginalImageAttributes = function(filename, callback) {
     callback(ia);       // do something with the image attributes
   });
 };
+
+/* * * * */
+
+module.exports = IR;
 ```
 
 ![identify method fails when wrapped](https://raw.github.com/nelsonic/imagemagic-test/master/sample-images/node-image-magic-identify-fails-when-wrapped.png "im.identify fails when wrapped")
