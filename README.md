@@ -1,10 +1,10 @@
 imagemagic-test
 ===============
 
-A few simple tests with node-imagemagic
+A few simple tests with node-imagemagick
 - - -
 
-node-imagemagic **identify** method works fine by its self.
+node-imagemagick **identify** method works fine by itself.
 
 ```javascript
 var im = require('imagemagick');
